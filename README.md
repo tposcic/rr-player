@@ -3,14 +3,14 @@
 **Audio player based on Electron**
 
 Features:
-***Random track playing from a preset folder (shuffle)***
+⋅⋅* Random track playing from a preset folder (shuffle
 
 Will feature:
-***Favorites***
-***Playlists***
-***Music library explorer***
-***Visualizer***
-***Song and author info from Wikipedia and other sources***
+⋅⋅* Favorites
+⋅⋅* Playlists
+⋅⋅* Music library explorer
+⋅⋅* Visualizer
+⋅⋅* Song and author info from Wikipedia and other sources
 
 ## To Use
 ```bash
