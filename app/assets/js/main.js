@@ -43,11 +43,11 @@ class App{
             if(!isNaN(a.player.currentTime) && !isNaN(a.player.duration)){
                 a.seeker.value = a.player.currentTime/a.player.duration;
                 a.timerDisplay.innerHTML = a.toHHMMSS(a.player.currentTime)+' / '+a.toHHMMSS(a.player.duration);
-                // win.setProgressBar(a.seeker.value);
+                //win.setProgressBar(a.seeker.value);
             } else {
                 a.seeker.value = 0;
                 a.timerDisplay.innerHTML = '00:00 / 00:00';
-                // win.setProgressBar(0);
+                //win.setProgressBar(0);
             }
         }
         a.seeker.onclick = function(e){
@@ -94,9 +94,9 @@ class App{
      */
     showMetadata(){
         document.getElementById('trackInfo').innerHTML = 
-        '<h3 class="trackMetaSnippet artistTitle">'+this.currentTrackMetadata.tags.artist+'</h3>'+
-        '<h3 class="trackMetaSnippet trackTitle">'+this.currentTrackMetadata.tags.title +'</h3>'+
-        '<h3 class="trackMetaSnippet albumTitle">'+this.currentTrackMetadata.tags.album+'</h3>';
+        '<h3 class="trackMetaSnippet artistTitle"><span>'+this.currentTrackMetadata.tags.artist+'</span></h3>'+
+        '<h3 class="trackMetaSnippet trackTitle"><span>'+this.currentTrackMetadata.tags.title +'</span></h3>'+
+        '<h3 class="trackMetaSnippet albumTitle"><span>'+this.currentTrackMetadata.tags.album+'</span></h3>';
     }
     /**
      * Show notification of the current track playing
@@ -178,10 +178,10 @@ class App{
         let player = document.getElementById('player');
         if (player.paused){
             player.play();
-            element.innerHTML = '&#10074;&#10074;';
+            element.innerHTML = '<i class="flaticon-pause"></i>';
         } else {
             player.pause();
-            element.innerHTML = '&#9658;';
+            element.innerHTML = '<i class="flaticon-music-player-play"></i>';
         }
     }
     /**
@@ -208,8 +208,7 @@ class App{
 
 const a = new App;
 const remote = require('electron').remote
-// const { BrowserWindow } = require('electron');
-// const win = new BrowserWindow()
+//const win = remote.BrowserWindow;
 
 const startText = ["My body is ready", "Just click it!", "Are you oiled up properly?", "Just do it!", "Clickity click", "The hills are alive with the sound of..."];
 

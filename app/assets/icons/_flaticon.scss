@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 12/11/2018 22:20
+    Creation date: 13/11/2018 19:55
     */
 
     @font-face {
@@ -36,28 +36,32 @@
   font-smoothing: antialiased;
     }
 
-    .flaticon-dice:before { content: "\f100"; }
-.flaticon-three-circling-arrows:before { content: "\f101"; }
-.flaticon-replay-arrow:before { content: "\f102"; }
-.flaticon-cog-wheel-silhouette:before { content: "\f103"; }
-.flaticon-music-player-play:before { content: "\f104"; }
-.flaticon-pause:before { content: "\f105"; }
-.flaticon-close:before { content: "\f106"; }
-.flaticon-minus-symbol:before { content: "\f107"; }
-.flaticon-favorite-heart-button:before { content: "\f108"; }
-.flaticon-heart:before { content: "\f109"; }
-.flaticon-volume-off:before { content: "\f10a"; }
-.flaticon-volume-off-indicator:before { content: "\f10b"; }
+    .flaticon-three-circling-arrows:before { content: "\f100"; }
+.flaticon-replay-arrow:before { content: "\f101"; }
+.flaticon-music-player-play:before { content: "\f102"; }
+.flaticon-pause:before { content: "\f103"; }
+.flaticon-close:before { content: "\f104"; }
+.flaticon-minus-symbol:before { content: "\f105"; }
+.flaticon-favorite-heart-button:before { content: "\f106"; }
+.flaticon-heart:before { content: "\f107"; }
+.flaticon-volume-off:before { content: "\f108"; }
+.flaticon-volume-off-indicator:before { content: "\f109"; }
+.flaticon-dice-cube-outline:before { content: "\f10a"; }
+.flaticon-dice:before { content: "\f10b"; }
+.flaticon-dice-with-number-five:before { content: "\f10c"; }
+.flaticon-gear:before { content: "\f10d"; }
     
-    $font-Flaticon-dice: "\f100";
-    $font-Flaticon-three-circling-arrows: "\f101";
-    $font-Flaticon-replay-arrow: "\f102";
-    $font-Flaticon-cog-wheel-silhouette: "\f103";
-    $font-Flaticon-music-player-play: "\f104";
-    $font-Flaticon-pause: "\f105";
-    $font-Flaticon-close: "\f106";
-    $font-Flaticon-minus-symbol: "\f107";
-    $font-Flaticon-favorite-heart-button: "\f108";
-    $font-Flaticon-heart: "\f109";
-    $font-Flaticon-volume-off: "\f10a";
-    $font-Flaticon-volume-off-indicator: "\f10b";
+    $font-Flaticon-three-circling-arrows: "\f100";
+    $font-Flaticon-replay-arrow: "\f101";
+    $font-Flaticon-music-player-play: "\f102";
+    $font-Flaticon-pause: "\f103";
+    $font-Flaticon-close: "\f104";
+    $font-Flaticon-minus-symbol: "\f105";
+    $font-Flaticon-favorite-heart-button: "\f106";
+    $font-Flaticon-heart: "\f107";
+    $font-Flaticon-volume-off: "\f108";
+    $font-Flaticon-volume-off-indicator: "\f109";
+    $font-Flaticon-dice-cube-outline: "\f10a";
+    $font-Flaticon-dice: "\f10b";
+    $font-Flaticon-dice-with-number-five: "\f10c";
+    $font-Flaticon-gear: "\f10d";

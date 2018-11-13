@@ -68,7 +68,7 @@ button{
 }
 .appContainer{
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 6fr 2fr;
     grid-template-columns: 1fr;
     position: relative;
     width: 100%;
@@ -81,8 +81,37 @@ button{
 .controlsContainer{
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     min-height: 0;
     min-width: 0;
+}
+.playerControlsContainer{
+    position: absolute;
+    bottom: 0;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+#volumeRange{
+    display: none;
+}
+#volumeControl{
+    position: absolute;
+    right: -70px;
+    top: 100px;
+}
+#favoriteControl{
+    position: absolute;
+    right: -49px;
+    top: 150px;
+}
+#volumeControl:hover input{
+    display: block;
+    position: absolute;
+    transform: rotate(270deg);
+    bottom: 88px;
 }
 .controlsContainer .inputGroup{
     position: relative;
@@ -102,16 +131,18 @@ button{
     width: 36px;
     border-radius: 50%;
     background: transparent;
-    color: white;
+    color: #13FFB9;
     margin-left: 20px;
     margin-right: 20px;
-    border: 2px solid white;
+    /* border: 2px solid #FF4613; */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    cursor: pointer;
 }
-.controlsContainer .control{
-
+.controlsContainer .control:hover{
+    background: rgba(19, 255, 185, 0.15);
 }
 .playerContainer{
     display: flex;
@@ -119,6 +150,7 @@ button{
     align-items: center;
     min-height: 0;
     min-width: 0;
+    position: relative;
 }
 #boot{
     left: 0;
@@ -127,7 +159,7 @@ button{
     width: 100%;
     height: 100%;
     background: #2196f3de;
-    z-index: 1;
+    z-index: 2;
 }
 #start{
     position: fixed;
@@ -154,11 +186,10 @@ button{
 .controlButton ~ label{
     width: 20px;
     height: 20px;
-    background: white;
 }
 
 .controlButton:checked ~ label{
-    background: blue;
+    background: rgba(19, 255, 185, 0.3);
 }
 
 /*PLAY BUTTON CSS*/
@@ -172,11 +203,13 @@ button{
 }
 
 .playButton button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: 800;
     font-size: 3rem;
-    /*the color should be transparent*/
-    color: black;
-    background: #dfff;
+    color: #13FFB9;
+    background: #29a9a94f;
     border: none;
     border-radius: 50%;
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
@@ -184,10 +217,16 @@ button{
     height: 170px;
     width: 170px;
     outline: none;
+    z-index: 1;
+}
+
+.playButton button i:before{
+    font-size: 70px;
+    margin-right: -20px;
 }
 
 .playButton button:hover{
-    background: #dfff;
+    background: #0c0e0e66;
     opacity: 0.5;
 }
 /*/PLAY BUTTON CSS*/
@@ -246,7 +285,7 @@ progress::-webkit-progress-value {
 #trackInfo{
     color: #BBB;
     font-size: 1.5rem;
-    padding-top: 1rem;
+    padding: 1rem;
     /* pointer-events: none; */
     max-width: 100%;
     min-width: 0;
@@ -265,9 +304,16 @@ progress::-webkit-progress-value {
     text-overflow:ellipsis;
 }
 .trackMetaSnippet:hover{
-    white-space: normal;
+    text-overflow: initial;
+}
+.trackMetaSnippet:hover:before{
+    opacity: 0.1;
+}
+.trackMetaSnippet:hover span{
+    animation: slide 5s linear infinite;
 }
 .trackMetaSnippet:before{
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
     font-size: 1rem;
     opacity: 0.5;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -402,6 +448,11 @@ progress::-webkit-progress-value {
     }
   }
   
+  @keyframes slide {
+    0%    { margin-left: 0; }
+    100%  { margin-left: -100%; }
+  }
+
   .auroral-agrabah {
     position: absolute;
     left: -50%;
@@ -535,15 +586,3 @@ progress::-webkit-progress-value {
     background: white;
     box-shadow: 119vw 46vh 0 1px rgba(255, 255, 255, 0.7), 17vw 47vh 0 2px rgba(255, 255, 255, 0.7), 98vw 35vh 0 1px rgba(255, 255, 255, 0.7), 94vw 25vh 0 1px rgba(255, 255, 255, 0.7), 33vw 46vh 0 1px rgba(255, 255, 255, 0.7), 11vw 5vh 0 2px rgba(255, 255, 255, 0.7), 44vw 47vh 0 2px rgba(255, 255, 255, 0.7), 74vw 4vh 0 2px rgba(255, 255, 255, 0.7), 28vw 18vh 0 2px rgba(255, 255, 255, 0.7), 45vw 45vh 0 1px rgba(255, 255, 255, 0.7), 18vw 26vh 0 1px rgba(255, 255, 255, 0.7), 57vw 44vh 0 2px rgba(255, 255, 255, 0.7), 64vw 28vh 0 2px rgba(255, 255, 255, 0.7), 100vw 17vh 0 1px rgba(255, 255, 255, 0.7), 74vw 36vh 0 1px rgba(255, 255, 255, 0.7), 94vw 16vh 0 1px rgba(255, 255, 255, 0.7), 48vw 34vh 0 2px rgba(255, 255, 255, 0.7), 86vw 5vh 0 2px rgba(255, 255, 255, 0.7), 25vw 7vh 0 1px rgba(255, 255, 255, 0.7), 89vw 34vh 0 1px rgba(255, 255, 255, 0.7), 15vw 32vh 0 2px rgba(255, 255, 255, 0.7), 93vw 25vh 0 2px rgba(255, 255, 255, 0.7), 41vw 9vh 0 2px rgba(255, 255, 255, 0.7), 42vw 36vh 0 1px rgba(255, 255, 255, 0.7), 54vw 23vh 0 1px rgba(255, 255, 255, 0.7), 50vw 46vh 0 1px rgba(255, 255, 255, 0.7), 50vw 19vh 0 2px rgba(255, 255, 255, 0.7), 60vw 40vh 0 1px rgba(255, 255, 255, 0.7), 59vw 4vh 0 2px rgba(255, 255, 255, 0.7), 15vw 23vh 0 2px rgba(255, 255, 255, 0.7), 14vw 38vh 0 1px rgba(255, 255, 255, 0.7), 58vw 41vh 0 1px rgba(255, 255, 255, 0.7), 70vw 7vh 0 1px rgba(255, 255, 255, 0.7), 10vw 25vh 0 1px rgba(255, 255, 255, 0.7), 44vw 33vh 0 1px rgba(255, 255, 255, 0.7), 70vw 37vh 0 2px rgba(255, 255, 255, 0.7), 28vw 33vh 0 1px rgba(255, 255, 255, 0.7), 72vw 7vh 0 2px rgba(255, 255, 255, 0.7), 68vw 34vh 0 1px rgba(255, 255, 255, 0.7), 13vw 17vh 0 2px rgba(255, 255, 255, 0.7), 13vw 7vh 0 2px rgba(255, 255, 255, 0.7), 53vw 36vh 0 1px rgba(255, 255, 255, 0.7), 99vw 24vh 0 1px rgba(255, 255, 255, 0.7), 94vw 23vh 0 2px rgba(255, 255, 255, 0.7), 93vw 38vh 0 1px rgba(255, 255, 255, 0.7), 81vw 18vh 0 2px rgba(255, 255, 255, 0.7), 15vw 33vh 0 1px rgba(255, 255, 255, 0.7), 11vw 29vh 0 1px rgba(255, 255, 255, 0.7), 82vw 23vh 0 1px rgba(255, 255, 255, 0.7), 80vw 32vh 0 1px rgba(255, 255, 255, 0.7), 9vw 2vh 0 2px rgba(255, 255, 255, 0.7), 69vw 2vh 0 1px rgba(255, 255, 255, 0.7), 46vw 39vh 0 1px rgba(255, 255, 255, 0.7), 46vw 15vh 0 1px rgba(255, 255, 255, 0.7), 54vw 48vh 0 1px rgba(255, 255, 255, 0.7), 66vw 34vh 0 1px rgba(255, 255, 255, 0.7), 7vw 42vh 0 2px rgba(255, 255, 255, 0.7), 18vw 17vh 0 1px rgba(255, 255, 255, 0.7), 81vw 14vh 0 2px rgba(255, 255, 255, 0.7), 97vw 16vh 0 1px rgba(255, 255, 255, 0.7), 97vw 8vh 0 2px rgba(255, 255, 255, 0.7), 73vw 35vh 0 2px rgba(255, 255, 255, 0.7), 94vw 7vh 0 2px rgba(255, 255, 255, 0.7), 19vw 41vh 0 2px rgba(255, 255, 255, 0.7), 92vw 38vh 0 2px rgba(255, 255, 255, 0.7), 72vw 2vh 0 2px rgba(255, 255, 255, 0.7), 87vw 45vh 0 2px rgba(255, 255, 255, 0.7), 48vw 45vh 0 1px rgba(255, 255, 255, 0.7), 28vw 11vh 0 1px rgba(255, 255, 255, 0.7), 51vw 50vh 0 2px rgba(255, 255, 255, 0.7), 85vw 2vh 0 2px rgba(255, 255, 255, 0.7), 79vw 39vh 0 1px rgba(255, 255, 255, 0.7), 28vw 4vh 0 2px rgba(255, 255, 255, 0.7), 37vw 11vh 0 2px rgba(255, 255, 255, 0.7), 82vw 34vh 0 2px rgba(255, 255, 255, 0.7), 36vw 48vh 0 1px rgba(255, 255, 255, 0.7), 45vw 46vh 0 1px rgba(255, 255, 255, 0.7), 6vw 44vh 0 2px rgba(255, 255, 255, 0.7), 99vw 11vh 0 2px rgba(255, 255, 255, 0.7), 12vw 46vh 0 1px rgba(255, 255, 255, 0.7), 1vw 3vh 0 1px rgba(255, 255, 255, 0.7), 38vw 34vh 0 1px rgba(255, 255, 255, 0.7), 88vw 4vh 0 1px rgba(255, 255, 255, 0.7), 91vw 17vh 0 1px rgba(255, 255, 255, 0.7), 56vw 34vh 0 2px rgba(255, 255, 255, 0.7), 66vw 6vh 0 1px rgba(255, 255, 255, 0.7), 67vw 41vh 0 1px rgba(255, 255, 255, 0.7), 54vw 34vh 0 2px rgba(255, 255, 255, 0.7), 28vw 17vh 0 1px rgba(255, 255, 255, 0.7), 41vw 17vh 0 2px rgba(255, 255, 255, 0.7), 36vw 22vh 0 1px rgba(255, 255, 255, 0.7), 23vw 2vh 0 1px rgba(255, 255, 255, 0.7), 4vw 9vh 0 1px rgba(255, 255, 255, 0.7), 31vw 23vh 0 2px rgba(255, 255, 255, 0.7), 54vw 26vh 0 2px rgba(255, 255, 255, 0.7), 52vw 14vh 0 1px rgba(255, 255, 255, 0.7), 29vw 45vh 0 1px rgba(255, 255, 255, 0.7), 34vw 45vh 0 2px rgba(255, 255, 255, 0.7), 25vw 19vh 0 1px rgba(255, 255, 255, 0.7), 100vw 43vh 0 1px rgba(255, 255, 255, 0.7), 77vw 46vh 0 0 rgba(255, 255, 255, 0.9);
   }
-
-
-  /*SLIDER*/
-#volumeControl{
-    position: absolute;
-    z-index: -1;
-    border-radius: 50%;
-    width: 190px;
-    height: 190px;
-    top: 0;
-    left: 0;
-}

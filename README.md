@@ -24,3 +24,6 @@ cd electron-quick-start
 npm install
 # Run the app
 npm start
+
+## Building for windows (requires electron-packager npm package)
+electron-packager .

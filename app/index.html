@@ -28,7 +28,7 @@
         <div class="aurora auroral-northern"></div>
         <div class="appContainer">
             <div class="controlsContainer">
-                <div id="random" class="control"><i class="flaticon-dice"></i></div>
+                <div id="random" class="control"><i class="flaticon-dice-cube-outline"></i></div>
                 <div class="inputGroup control">
                     <input id="autoplayToggle" class="controlButton" name="autoplayToggle" type='checkbox' checked>
                     <label for="autoplayToggle"><i class="flaticon-three-circling-arrows"></i></label>
@@ -37,33 +37,25 @@
                     <input id="replayToggle" class="controlButton" name="autoplayToggle" type='checkbox'>
                     <label for="replayToggle"><i class="flaticon-replay-arrow"></i></label>
                 </div>
-                <div id="settings" class="control"><i class="flaticon-cog-wheel-silhouette"></i></div>
+                <div id="settings" class="control"><i class="flaticon-gear"></i></div>
             </div>
             <div class="playerContainer">
                 <audio id="player" src=""></audio>
-                <input type="range" id="volumeRange" min="0.00" max="1.00" value="0.5" step="0.01" />
                 <div class="playButton">
-                    <!-- slider -->
-                    <div id="volumeControl">
-                        <!-- <svg id="animated" viewbox="0 0 190 190">
-                            <circle cx="95" cy="95" r="90" fill="#FDB900"/>
-                            <path fill="none" stroke-linecap="round" stroke-width="5" stroke="#000000"
-                                    stroke-dasharray="251.2,0"
-                                    d="M95 5
-                                        a 90 90 0 0 1 0 180
-                                        a 90 90 0 0 1 0 -180">
-                                <animate attributeName="stroke-dasharray" from="0,251.2" to="251.2,0" dur="5s"/>           
-                            </path>
-                        </svg> -->
+                    <button id="playToggle"><i class="flaticon-pause"></i></button>
+                    <div class="controlsContainer playerControlsContainer">
+                        <div id="volumeControl" class="control">
+                            <i class="flaticon-volume-off"></i>
+                            <input type="range" id="volumeRange" min="0.00" max="1.00" value="0.5" step="0.01" />
+                        </div>
+                        <div id="favoriteControl" class="control"><i class="flaticon-heart"></i></div>
                     </div>
-                    <!-- slider -->
-                    <button id="playToggle">&#10074;&#10074;</button>
                 </div>
             </div>
             <div id="trackInfo">
-                <h3 class="trackMetaSnippet artistTitle">Mr. Artist Starving</h3>
-                <h3 class="trackMetaSnippet trackTitle">Senor Musico</h3>
-                <h3 class="trackMetaSnippet albumTitle">Sir Arthur Album</h3>
+                <h3 class="trackMetaSnippet artistTitle"><span>Mr. Artist Starving</span></h3>
+                <h3 class="trackMetaSnippet trackTitle"><span>Senor Musico</span></h3>
+                <h3 class="trackMetaSnippet albumTitle"><span>Sir Arthur Album</span></h3>
             </div>            
             <div id="progress">
                 <progress id="seeker" value="0" max="1"></progress>
