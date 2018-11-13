@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/icons/flaticon.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/main.css"/>
+</head>
+<body>
+    <div id="header">
+        <div class="appTitle">
+            <span>Randy Random</span>
+        </div>
+        <div class="appDrag">
+        </div>
+        <div class="appButtons">
+            <button id="minimizeAppButton"><i class="flaticon-minus-symbol"></i></button>
+            <button id="closeAppButton"><i class="flaticon-close"></i></button>
+        </div>
+    </div>
+    <div id="boot">
+        <div class="aurora auroral-agrabah"></div>
+        <button id="start" class="button">Start it up</button>
+    </div>
+    <div id="a">
+        <div class="aurora auroral-northern"></div>
+        <div class="appContainer">
+            <div class="controlsContainer">
+                <div id="random" class="control"><i class="flaticon-dice"></i></div>
+                <div class="inputGroup control">
+                    <input id="autoplayToggle" class="controlButton" name="autoplayToggle" type='checkbox' checked>
+                    <label for="autoplayToggle"><i class="flaticon-three-circling-arrows"></i></label>
+                </div>
+                <div class="inputGroup control">
+                    <input id="replayToggle" class="controlButton" name="autoplayToggle" type='checkbox'>
+                    <label for="replayToggle"><i class="flaticon-replay-arrow"></i></label>
+                </div>
+                <div id="settings" class="control"><i class="flaticon-cog-wheel-silhouette"></i></div>
+            </div>
+            <div class="playerContainer">
+                <audio id="player" src=""></audio>
+                <input type="range" id="volumeRange" min="0.00" max="1.00" value="0.5" step="0.01" />
+                <div class="playButton">
+                    <!-- slider -->
+                    <div id="volumeControl">
+                        <!-- <svg id="animated" viewbox="0 0 190 190">
+                            <circle cx="95" cy="95" r="90" fill="#FDB900"/>
+                            <path fill="none" stroke-linecap="round" stroke-width="5" stroke="#000000"
+                                    stroke-dasharray="251.2,0"
+                                    d="M95 5
+                                        a 90 90 0 0 1 0 180
+                                        a 90 90 0 0 1 0 -180">
+                                <animate attributeName="stroke-dasharray" from="0,251.2" to="251.2,0" dur="5s"/>           
+                            </path>
+                        </svg> -->
+                    </div>
+                    <!-- slider -->
+                    <button id="playToggle">&#10074;&#10074;</button>
+                </div>
+            </div>
+            <div id="trackInfo">
+                <h3 class="trackMetaSnippet artistTitle">Mr. Artist Starving</h3>
+                <h3 class="trackMetaSnippet trackTitle">Senor Musico</h3>
+                <h3 class="trackMetaSnippet albumTitle">Sir Arthur Album</h3>
+            </div>            
+            <div id="progress">
+                <progress id="seeker" value="0" max="1"></progress>
+                <span id="timerDisplay">00:00 / 00:00</span>
+            </div>
+        </div>
+    </div>
+    <script src="./dist/id3reader.js"></script>
+    <script>
+        // You can also require other files to run in this process
+        require('../renderer.js')
+        require('./assets/js/main.js')
+    </script>
+</body>
+</html>

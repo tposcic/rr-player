@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/main.css" />
+</head>
+<body>
+    <div id="boot">
+        <div class="aurora auroral-agrabah"></div>
+        <button id="start" class="button">Start it up</button>
+    </div>
+    <div id="a">
+        <div id="trackInfo">
+            <h3 class="trackMetaSnippet artistTitle">Mr. Artist Starving</h3>
+            <h3 class="trackMetaSnippet trackTitle">Senor Musico</h3>
+            <h3 class="trackMetaSnippet albumTitle">Sir Arthur Album</h3>
+        </div>
+        <div class="aurora auroral-northern"></div>
+        <button id="random" class="button">Give me more</button>
+        <input id="autoplayToggle" type='checkbox' checked>Autoplay
+        <input id="replayToggle" type='checkbox'>Replay
+        <br>
+        <audio id="player" src="" controls></audio>
+        <input type="range" id="volumeRange" min="0.00" max="1.00" value="0.5" step="0.01" />
+        <br>
+        <h1 id="artistTitle"></h1>
+        <h2 id="songTitle"></h2>
+        <h4 id="albumTitle"></h4>
+        <div id="progress">
+            <progress id="seeker" value="0" max="1"></progress>
+            <span id="timerDisplay">00:00 / 00:00</span>
+        </div>
+    </div>
+    <script>
+        // You can also require other files to run in this process
+        require('../renderer.js')
+    </script>
+    <!-- used to read track metadata -->
+    <script src="./dist/id3reader.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
