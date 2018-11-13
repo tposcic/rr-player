@@ -12,6 +12,14 @@ Will feature:
 * Visualizer
 * Song and author info from Wikipedia and other sources
 
+**PHP script version**
+
+The old abandoned version can be found [here](https://github.com/tposcic/randy_random) 
+
+**Windows binaries**
+
+Built Windows binaries are coming soon...
+
 ## To Use
 ```bash
 # Clone this repository
