@@ -27,9 +27,9 @@ base_folder in conf.json currently has to be set to an existing folder for the a
 ## To Use
 ```bash
 # Clone this repository
-git clone https://github.com/electron/electron-quick-start
+git clone https://github.com/tposcic/rr-player.git
 # Go into the repository
-cd electron-quick-start
+cd rr-player
 # Install dependencies
 npm install
 # Run the app
