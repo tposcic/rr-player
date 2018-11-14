@@ -20,6 +20,9 @@ The old abandoned version can be found [here](https://github.com/tposcic/randy_r
 
 Built Windows binaries are coming soon...
 
+**Configuration**
+base_folder in conf.json currently has to be set to an existing folder for the app to work
+
 ## To Use
 ```bash
 # Clone this repository
@@ -30,6 +33,5 @@ cd electron-quick-start
 npm install
 # Run the app
 npm start
-
-## Building for windows (requires electron-packager npm package)
+## You can build the app for windows (requires electron-packager npm package)
 electron-packager .
