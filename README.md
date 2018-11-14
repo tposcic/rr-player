@@ -1,5 +1,7 @@
 # rr-player
 
+![Player screenshot](https://raw.githubusercontent.com/tposcic/rr-player/master/app/assets/img/rr-player.jpg)
+
 **Audio player based on Electron**
 
 Features:
