@@ -3,7 +3,7 @@
 **Audio player based on Electron**
 
 Features:
-* Random track playing from a preset folder (shuffle
+* Random track playing from a preset folder (shuffle)
 
 Will feature:
 * Favorites
