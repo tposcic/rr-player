@@ -21,6 +21,7 @@ The old abandoned version can be found [here](https://github.com/tposcic/randy_r
 Built Windows binaries are coming soon...
 
 **Configuration**
+
 base_folder in conf.json currently has to be set to an existing folder for the app to work
 
 ## To Use
