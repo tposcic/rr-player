@@ -1,7 +1,5 @@
 # rr-player
 
-![Player screenshot](https://raw.githubusercontent.com/tposcic/rr-player/master/app/assets/img/rr-player.jpg)
-
 **Audio player based on Electron**
 
 Features:
@@ -13,6 +11,8 @@ Will feature:
 * Music library explorer
 * Visualizer
 * Song and author info from Wikipedia and other sources
+
+![Player screenshot](https://raw.githubusercontent.com/tposcic/rr-player/master/app/assets/img/rr-player.jpg)
 
 **PHP script version**
 
