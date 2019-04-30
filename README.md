@@ -4,9 +4,9 @@
 
 Features:
 * Random track playing from a preset folder (shuffle)
+* Favorites
 
 Will feature:
-* Favorites
 * Playlists
 * Music library explorer
 * Visualizer
